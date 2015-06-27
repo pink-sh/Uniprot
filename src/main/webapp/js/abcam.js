@@ -57,7 +57,7 @@ if (typeof String.prototype.startsWith != 'function') {
     			$scope.reccomendedNames = null;
     			$scope.organism = null;
     			$scope.an = null;
-	    	    $scope.error = "Some Errors Happened... code: " + response.status;
+	    	    $scope.error = "Invalid Accession Number... error code: " + response.status;
 	    	});
 	    }
 	}])
