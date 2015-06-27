@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en" ng-app="abcam">
+<head>
+  <base href="/cgrfa/">
+  <meta charset="UTF-8">
+  <title>Abcam Test</title>
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/0.8.3/angular-material.min.css">
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+  <!-- Generic page styles -->
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="angular/bower_components/lodash/dist/lodash.min.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-animate.min.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-aria.min.js"></script>
+  <script type="text/javascript" src="js/angular-material.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-sanitize.min.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-route.min.js"></script>
+  <script type="text/javascript" src="angular/bower_components/restangular/dist/restangular.min.js"></script>
+  
+  <script type="text/javascript" src="js/abcam.js"></script>
+
+
+
+</head>
+<body>
+  <div id="wait-loading" class="wait-loading" ng-cloak>
+      <img src="img/ajax-loader.gif">
+  </div>
+    <div ng-controller="selectController" ng-cloak>
+      <md-content flex layout-padding style="background-color: #eeeeee; top: 150px;">
+        <div ng-view></div>
+      </md-content>
+    </div>
+</body>
+</html>
