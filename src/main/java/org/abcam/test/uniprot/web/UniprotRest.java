@@ -26,15 +26,7 @@ import org.uniprot.uniprot.Uniprot;
 public class UniprotRest {
 	
 	@Context ServletContext context;
-	
-	@GET
-	@Produces(MediaType.TEXT_PLAIN)
-	@Path("test/")
-	public String test() {
-		return "Here we are!";
-	}
-	
-	
+
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
 	@Path("getProtein/{id}")
@@ -48,11 +40,6 @@ public class UniprotRest {
 	        InputStream xml = url.openStream();
 	        JAXBElement<Uniprot> feed = unmarshaller.unmarshal(new StreamSource(xml), Uniprot.class);
 	        xml.close();
-
-	        /*Marshaller marshaller = jc.createMarshaller();
-	        marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
-	        marshaller.marshal(feed, System.out);*/
-	        
 	        ObjectMapper mapper = new ObjectMapper();
 	        return Response.ok(mapper.writeValueAsString(feed)).build();
 		} catch (JAXBException e) {
